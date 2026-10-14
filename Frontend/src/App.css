@@ -1,0 +1,50 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+    color: #ececec;
+    font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Body */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #212121;
+}
+
+/* React Root */
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main App */
+.app {
+    background-color: #212121;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #171717;
+    min-height: 100vh;
+}
+
+/* Chat Window */
+.chatWindow {
+    background-color: #212121;
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+}

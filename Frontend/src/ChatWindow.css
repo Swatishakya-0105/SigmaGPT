@@ -1,0 +1,229 @@
+/* Main Chat Window */
+.chatWindow {
+    background-color: #212121;
+    color: white;
+    height: 100vh;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.navbar span {
+    margin: 1rem;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.userIconDiv {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.userIcon {
+    background-color: #339cff;
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Chat Messages Area */
+.chats {
+    flex: 1;
+    width: 100%;
+    max-width: 850px;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Chat Input Container */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* Input Box */
+.inputBox {
+    width: 100%;
+    position: relative;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+    border: 1px solid #565656;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+/* Text Input */
+.inputBox input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    padding: 18px 55px 18px 20px;
+    font-size: 16px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.inputBox input::placeholder {
+    color: #a0a0a0;
+}
+
+/* Send Button */
+#submit {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    font-size: 18px;
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #212121;
+    transition: background-color 0.2s ease;
+}
+
+#submit:hover {
+    background-color: #dcdcdc;
+}
+
+#submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Input Information */
+.info {
+    font-size: 12px;
+    padding: 8px;
+    margin: 0;
+    color: #b4b4b4;
+    text-align: center;
+}
+
+/* Loading Animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+/* Profile Dropdown */
+.dropDown {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    width: 170px;
+    background-color: #303030;
+    color: white;
+    padding: 8px;
+    border: 1px solid #484848;
+    border-radius: 8px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Items */
+.dropDownItem {
+    font-size: 14px;
+    margin: 4px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropDownItem:hover {
+    background-color: #444444;
+}
+
+/* Scrollbar */
+.chats::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 10px;
+}
+
+.chats::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 8px;
+    }
+
+    .navbar span {
+        margin: 12px;
+        font-size: 18px;
+    }
+
+    .userIconDiv {
+        margin: 12px;
+    }
+
+    .chatInput {
+        padding: 10px;
+    }
+
+    .inputBox input {
+        font-size: 14px;
+        padding: 15px 50px 15px 15px;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+
+    .dropDown {
+        right: 15px;
+    }
+}
